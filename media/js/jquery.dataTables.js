@@ -1695,6 +1695,21 @@
 					cellProcess( td );
 					tds.push( td );
 				}
+				//colspan patch//
+                    		if ($(td).attr('colspan') !== undefined) {
+                        		var $emptyCell = $('<tr></tr>');
+
+                        		var colSpanSize = parseInt($(td).attr('colspan'));
+                        		if (colSpanSize > 1) {
+                            			var colSpanSizeDelta = colSpanSize - 1; //Delta
+                            			for (var colSpanCounter = 0; colSpanCounter < colSpanSizeDelta; colSpanCounter++) {
+                                			cellProcess($emptyCell); //process empty cell as if where an empty tr DOM and increment column counter.
+                                			tds.push($emptyCell);
+                            			}
+                        		}
+                    		}
+                    		//colspan patch//
+				
 	
 				td = td.nextSibling;
 			}
