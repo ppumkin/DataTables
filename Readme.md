@@ -1,3 +1,30 @@
+# DataTables tbody colspan patch
+
+This is a fork of the main DataTables repository that has a patch applied in the column/cell parser engine to allow rows with colspan in the tbody to be loaded.
+
+This is a very basic patch that was created to prevent inititialisastion blow up caused by missing number '<td>` in rows. The engine is built in such a way that the td must be equal or more than in the header. Since colspan takes up visual space of these cells but in the markup you use one less td, then parsing engine fails because it cannot build a consistent data object. Funnily enough, when you have more td than expected, they get ignored.
+
+# What does this patch mean then? 
+
+Simply put.
+
+ - Any shortfall in '<td>' when parsing from DOM, will get initialised with a default value of "" (Empty String)
+ - Visually, your colspan row will span as youd expect it. 
+ - Searching will return expected results for remainder of rows as expected
+ - Sorting the "empty" column will show empty cells at top (A->Z) or bottom (Z->A)
+ - DOM structure is not affected
+ - 
+# Maintanence
+
+The original creator of the script has done a magnificient job with DataTables. He has expressed great concern with supporting colspan and rowspan in tbody. So in short, there is no maintanence of this patch. It comes as it is and if you feel like creating an issue, maybe ill fix it maybe not. 
+
+I will try and keep this fork with the latest head
+
+These changes may impact stability within other parts of this script. 
+No regression tests have been done so use at your own risk.
+
+--Original Readme--
+
 # DataTables plug-in for jQuery
 
 DataTables is a table enhancing plug-in for the [jQuery](//jquery.com) Javascript library, adding sorting, paging and filtering abilities to plain HTML tables with minimal effort. The stated goal of DataTables is:
