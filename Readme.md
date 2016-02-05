@@ -15,6 +15,7 @@ Simply put.
  - Searching will return expected results for remainder of rows as expected
  - Sorting the "empty" column will show empty cells at top (A->Z) or bottom (Z->A)
  - DOM structure is not affected
+ - Removed minified file from this branch. Please minify your self, excuse the pun.
  
 # Maintanence
 
