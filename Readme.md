@@ -1,5 +1,9 @@
 # DataTables tbody colspan patch
 
+**Originating issue on from original repository**
+
+https://github.com/DataTables/DataTables/issues/172#issuecomment-180070174
+
 **Bla bla bla, where is the file?**
 
 https://github.com/ppumkin/DataTables/blob/ppumkin-patch-1-colspan/media/js/jquery.dataTables.js
