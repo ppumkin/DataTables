@@ -5,7 +5,7 @@
 /**
  * @summary     DataTables
  * @description Paginate, search and order HTML tables
- * @version     1.10.11-dev
+ * @version     1.10.11-dev-ppumkin-colspan-patch1
  * @file        jquery.dataTables.js
  * @author      SpryMedia Ltd (www.sprymedia.co.uk)
  * @contact     www.sprymedia.co.uk/contact
