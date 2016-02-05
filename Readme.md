@@ -1,5 +1,12 @@
 # DataTables tbody colspan patch
 
+**Bla bla bla, where is the file?**
+
+https://github.com/ppumkin/DataTables/blob/ppumkin-patch-1-colspan/media/js/jquery.dataTables.js
+
+
+**And if you are intersted...**
+
 This is a fork of the main DataTables repository that has a patch applied in the column/cell parser engine to allow rows with `colspan` in the `tbody` to be loaded.
 
 This is a very basic patch that was created to prevent inititialisastion blow up caused by missing number `<td>` in rows. The engine is built in such a way that the td must be equal or more than in the header. Since `colspan` takes up visual space of these cells but in the markup you use less td elements, then parsing engine fails because it cannot build a consistent data object. 
