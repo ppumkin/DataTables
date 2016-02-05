@@ -15,7 +15,7 @@ Simply put.
  - Searching will return expected results for remainder of rows as expected
  - Sorting the "empty" column will show empty cells at top (A->Z) or bottom (Z->A)
  - DOM structure is not affected
- - 
+ 
 # Maintanence
 
 The original creator of the script has done a magnificient job with DataTables. He has expressed great concern with supporting colspan and rowspan in tbody. So in short, there is no maintanence of this patch. It comes as it is and if you feel like creating an issue, maybe ill fix it maybe not. 
